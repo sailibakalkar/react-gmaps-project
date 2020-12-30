@@ -3,7 +3,7 @@ import GoogleMap from 'google-map-react'
 
 //import {BrowserRouter as Router} from 'react-router-dom'
 import Marker from '../Map/Marker'
-import Polyline from '../Map/Polyline'
+import EmailPolyline from '../Map/EmailPolyline'
 //import Navbar from '../Navbar/Navbar'
 
 class Email extends Component {
@@ -42,7 +42,7 @@ class Email extends Component {
   afterMapLoadChanges () {
     return (
       <div style={{display: 'none'}}>
-        <Polyline
+        <EmailPolyline
           map={this.state.map}
           maps={this.state.maps}
           markers={this.props.markers} />

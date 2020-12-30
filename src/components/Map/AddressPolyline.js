@@ -1,7 +1,6 @@
 import { Component } from 'react'
 
-export default class AddressPolyline extends Component {
-  
+export default class Polyline extends Component {
   renderPolylines () {
     const { markers, map, maps } = this.props
 
@@ -9,21 +8,21 @@ export default class AddressPolyline extends Component {
     let geodesicPolyline = new maps.Polyline({
       path: markers,
       geodesic: true,
-      strokeColor: 'red',
+      strokeColor: 'green',
       strokeOpacity: 1.0,
-      strokeWeight: 8
+      strokeWeight: 6
     })
     geodesicPolyline.setMap(map)
 
     /** Example of rendering non geodesic polyline (straight line) */
-    let nonGeodesicPolyline = new maps.Polyline({
-      path: markers,
-      geodesic: false,
-      strokeColor: 'red',
-      strokeOpacity: 0.7,
-      strokeWeight: 3
-    })
-    nonGeodesicPolyline.setMap(map)
+    // let nonGeodesicPolyline = new maps.Polyline({
+    //   path: markers,
+    //   geodesic: false,
+    //   strokeColor: 'red',
+    //   strokeOpacity: 0.7,
+    //   strokeWeight: 3
+    // })
+    // nonGeodesicPolyline.setMap(map)
   }
 
   render () {

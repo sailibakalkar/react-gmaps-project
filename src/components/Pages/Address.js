@@ -5,10 +5,10 @@ import GoogleMap from 'google-map-react'
 import Marker from '../Map/Marker'
 import Polyline from '../Map/Polyline'
 //import Navbar from '../Navbar/Navbar'
-
+import InfoWindow from '../Map/InfoWindow'
+import AddressPolyline from "../Map/AddressPolyline"
 
 class Address extends Component {
-  
   
   constructor (props) {
     super(props)
@@ -43,12 +43,11 @@ class Address extends Component {
   afterMapLoadChanges () {
     return (
       <div style={{display: 'none'}}>
-        <Polyline
+        <AddressPolyline
           map={this.state.map}
           maps={this.state.maps}
           markers={this.props.markers} />
       </div>
-     
     )
   }
 
@@ -62,9 +61,9 @@ class Address extends Component {
         defaultCenter={this.props.center}
         defaultZoom={this.props.zoom}
         onGoogleApiLoaded={({map, maps}) => this.onMapLoaded(map, maps)}>
-        <Marker text={'saili'} lat={19.1196225} lng={72.8152608} />
-        <Marker text={'sara'} lat={19.1159478} lng={72.8397314} />
-        <Marker text={'saraaa'} lat={19.2096532} lng={72.7939621} />
+        <Marker text={'Saili'} lat={19.1196225} lng={72.8152608} />
+        <Marker text={'Sara'} lat={19.1159478} lng={72.8397314} />
+        <Marker text={'Deepak'} lat={19.2096532} lng={72.7939621} />
         
         {this.state.mapsLoaded ? this.afterMapLoadChanges() : ''}
         

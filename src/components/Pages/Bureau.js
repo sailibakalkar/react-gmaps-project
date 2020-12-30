@@ -61,7 +61,7 @@ class Bureau extends Component {
         defaultCenter={this.props.center}
         defaultZoom={this.props.zoom}
         onGoogleApiLoaded={({map, maps}) => this.onMapLoaded(map, maps)}>
-        <Marker text={'Deepak'} lat={25.1698297} lng={80.840106} />
+        <Marker text={'Deepak '} lat={25.1698297} lng={80.840106} />
         <Marker text={'sara'} lat={19.1159478} lng={72.8397314} />
         <Marker text={'saraaa'} lat={19.2096532} lng={72.7939621} />
         

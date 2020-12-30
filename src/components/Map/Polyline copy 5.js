@@ -1,7 +1,6 @@
 import { Component } from 'react'
 
-export default class AddressPolyline extends Component {
-  
+export default class Polyline extends Component {
   renderPolylines () {
     const { markers, map, maps } = this.props
 
@@ -11,7 +10,7 @@ export default class AddressPolyline extends Component {
       geodesic: true,
       strokeColor: 'red',
       strokeOpacity: 1.0,
-      strokeWeight: 8
+      strokeWeight: 6
     })
     geodesicPolyline.setMap(map)
 

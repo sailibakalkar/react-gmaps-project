@@ -13,17 +13,19 @@ import { IconContext } from 'react-icons';
 
   return (
     <div>
+       
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
-          <Link to='#' className='menu-bars'>
+        <h1 className="title">DMI Finance</h1>
+          {/* <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
-          </Link>
+          </Link> */}
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu active'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className='navbar-toggle'>
               <Link to='#' className='menu-bars'>
-                <AiIcons.AiOutlineClose />
+                <img className='logo' src="https://nseit-website.s3.ap-south-1.amazonaws.com/assets/images/logo_white.png" />
               </Link>
             </li>
             {SidebarData.map((item, index) => {
